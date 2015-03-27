@@ -13,6 +13,16 @@
 		AE0EF5371AC5FF3600A1FF9E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE0EF5361AC5FF3600A1FF9E /* Images.xcassets */; };
 		AE0EF53A1AC5FF3600A1FF9E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE0EF5381AC5FF3600A1FF9E /* LaunchScreen.xib */; };
 		AE0EF5461AC5FF3600A1FF9E /* loginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0EF5451AC5FF3600A1FF9E /* loginTests.swift */; };
+		AE0EF55A1AC60ABA00A1FF9E /* DeathtoStock_Wired1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE0EF5501AC60ABA00A1FF9E /* DeathtoStock_Wired1.jpg */; };
+		AE0EF55B1AC60ABA00A1FF9E /* DeathtoStock_Wired10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE0EF5511AC60ABA00A1FF9E /* DeathtoStock_Wired10.jpg */; };
+		AE0EF55C1AC60ABA00A1FF9E /* DeathtoStock_Wired2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE0EF5521AC60ABA00A1FF9E /* DeathtoStock_Wired2.jpg */; };
+		AE0EF55D1AC60ABA00A1FF9E /* DeathtoStock_Wired3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE0EF5531AC60ABA00A1FF9E /* DeathtoStock_Wired3.jpg */; };
+		AE0EF55E1AC60ABA00A1FF9E /* DeathtoStock_Wired4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE0EF5541AC60ABA00A1FF9E /* DeathtoStock_Wired4.jpg */; };
+		AE0EF55F1AC60ABA00A1FF9E /* DeathtoStock_Wired5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE0EF5551AC60ABA00A1FF9E /* DeathtoStock_Wired5.jpg */; };
+		AE0EF5601AC60ABA00A1FF9E /* DeathtoStock_Wired6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE0EF5561AC60ABA00A1FF9E /* DeathtoStock_Wired6.jpg */; };
+		AE0EF5611AC60ABA00A1FF9E /* DeathtoStock_Wired7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE0EF5571AC60ABA00A1FF9E /* DeathtoStock_Wired7.jpg */; };
+		AE0EF5621AC60ABA00A1FF9E /* DeathtoStock_Wired8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE0EF5581AC60ABA00A1FF9E /* DeathtoStock_Wired8.jpg */; };
+		AE0EF5631AC60ABA00A1FF9E /* DeathtoStock_Wired9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE0EF5591AC60ABA00A1FF9E /* DeathtoStock_Wired9.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +46,16 @@
 		AE0EF53F1AC5FF3600A1FF9E /* loginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = loginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE0EF5441AC5FF3600A1FF9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE0EF5451AC5FF3600A1FF9E /* loginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginTests.swift; sourceTree = "<group>"; };
+		AE0EF5501AC60ABA00A1FF9E /* DeathtoStock_Wired1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DeathtoStock_Wired1.jpg; sourceTree = "<group>"; };
+		AE0EF5511AC60ABA00A1FF9E /* DeathtoStock_Wired10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DeathtoStock_Wired10.jpg; sourceTree = "<group>"; };
+		AE0EF5521AC60ABA00A1FF9E /* DeathtoStock_Wired2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DeathtoStock_Wired2.jpg; sourceTree = "<group>"; };
+		AE0EF5531AC60ABA00A1FF9E /* DeathtoStock_Wired3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DeathtoStock_Wired3.jpg; sourceTree = "<group>"; };
+		AE0EF5541AC60ABA00A1FF9E /* DeathtoStock_Wired4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DeathtoStock_Wired4.jpg; sourceTree = "<group>"; };
+		AE0EF5551AC60ABA00A1FF9E /* DeathtoStock_Wired5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DeathtoStock_Wired5.jpg; sourceTree = "<group>"; };
+		AE0EF5561AC60ABA00A1FF9E /* DeathtoStock_Wired6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DeathtoStock_Wired6.jpg; sourceTree = "<group>"; };
+		AE0EF5571AC60ABA00A1FF9E /* DeathtoStock_Wired7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DeathtoStock_Wired7.jpg; sourceTree = "<group>"; };
+		AE0EF5581AC60ABA00A1FF9E /* DeathtoStock_Wired8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DeathtoStock_Wired8.jpg; sourceTree = "<group>"; };
+		AE0EF5591AC60ABA00A1FF9E /* DeathtoStock_Wired9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DeathtoStock_Wired9.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +110,7 @@
 		AE0EF52D1AC5FF3600A1FF9E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AE0EF54F1AC60ABA00A1FF9E /* DeathtoStock_Wired */,
 				AE0EF52E1AC5FF3600A1FF9E /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -110,6 +131,24 @@
 				AE0EF5441AC5FF3600A1FF9E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AE0EF54F1AC60ABA00A1FF9E /* DeathtoStock_Wired */ = {
+			isa = PBXGroup;
+			children = (
+				AE0EF5501AC60ABA00A1FF9E /* DeathtoStock_Wired1.jpg */,
+				AE0EF5511AC60ABA00A1FF9E /* DeathtoStock_Wired10.jpg */,
+				AE0EF5521AC60ABA00A1FF9E /* DeathtoStock_Wired2.jpg */,
+				AE0EF5531AC60ABA00A1FF9E /* DeathtoStock_Wired3.jpg */,
+				AE0EF5541AC60ABA00A1FF9E /* DeathtoStock_Wired4.jpg */,
+				AE0EF5551AC60ABA00A1FF9E /* DeathtoStock_Wired5.jpg */,
+				AE0EF5561AC60ABA00A1FF9E /* DeathtoStock_Wired6.jpg */,
+				AE0EF5571AC60ABA00A1FF9E /* DeathtoStock_Wired7.jpg */,
+				AE0EF5581AC60ABA00A1FF9E /* DeathtoStock_Wired8.jpg */,
+				AE0EF5591AC60ABA00A1FF9E /* DeathtoStock_Wired9.jpg */,
+			);
+			name = DeathtoStock_Wired;
+			path = ../../../../../Downloads/DeathtoStock_Wired;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,8 +232,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE0EF5351AC5FF3600A1FF9E /* Main.storyboard in Resources */,
+				AE0EF5601AC60ABA00A1FF9E /* DeathtoStock_Wired6.jpg in Resources */,
+				AE0EF55E1AC60ABA00A1FF9E /* DeathtoStock_Wired4.jpg in Resources */,
 				AE0EF53A1AC5FF3600A1FF9E /* LaunchScreen.xib in Resources */,
+				AE0EF55F1AC60ABA00A1FF9E /* DeathtoStock_Wired5.jpg in Resources */,
+				AE0EF55A1AC60ABA00A1FF9E /* DeathtoStock_Wired1.jpg in Resources */,
+				AE0EF55D1AC60ABA00A1FF9E /* DeathtoStock_Wired3.jpg in Resources */,
+				AE0EF55C1AC60ABA00A1FF9E /* DeathtoStock_Wired2.jpg in Resources */,
 				AE0EF5371AC5FF3600A1FF9E /* Images.xcassets in Resources */,
+				AE0EF5621AC60ABA00A1FF9E /* DeathtoStock_Wired8.jpg in Resources */,
+				AE0EF55B1AC60ABA00A1FF9E /* DeathtoStock_Wired10.jpg in Resources */,
+				AE0EF5611AC60ABA00A1FF9E /* DeathtoStock_Wired7.jpg in Resources */,
+				AE0EF5631AC60ABA00A1FF9E /* DeathtoStock_Wired9.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
