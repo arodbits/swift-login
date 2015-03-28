@@ -56,6 +56,7 @@
 		AE0EF5571AC60ABA00A1FF9E /* DeathtoStock_Wired7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DeathtoStock_Wired7.jpg; sourceTree = "<group>"; };
 		AE0EF5581AC60ABA00A1FF9E /* DeathtoStock_Wired8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DeathtoStock_Wired8.jpg; sourceTree = "<group>"; };
 		AE0EF5591AC60ABA00A1FF9E /* DeathtoStock_Wired9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DeathtoStock_Wired9.jpg; sourceTree = "<group>"; };
+		AE0EF5681AC637C600A1FF9E /* Tester.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Tester.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +80,7 @@
 		AE0EF5211AC5FF3500A1FF9E = {
 			isa = PBXGroup;
 			children = (
+				AE0EF5681AC637C600A1FF9E /* Tester.playground */,
 				AE0EF52C1AC5FF3600A1FF9E /* login */,
 				AE0EF5421AC5FF3600A1FF9E /* loginTests */,
 				AE0EF52B1AC5FF3600A1FF9E /* Products */,
@@ -386,6 +388,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = login/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -396,6 +399,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = login/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -454,6 +458,7 @@
 				AE0EF54B1AC5FF3600A1FF9E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AE0EF54C1AC5FF3600A1FF9E /* Build configuration list for PBXNativeTarget "loginTests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +467,7 @@
 				AE0EF54E1AC5FF3600A1FF9E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
