@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "login/ViewController.swift"
+            timestampString = "449280355.549465"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "login.ViewController.(viewDidLoad (login.ViewController) -&gt; () -&gt; ()).(closure #1)"
+                  moduleName = "login"
+                  urlString = "file:///Users/anthonyrodriguez1/Code/ios/login/login/login/ViewController.swift"
+                  timestampString = "449279295.938803"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "3262">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "login.ViewController.(viewDidLoad (login.ViewController) -&gt; () -&gt; ()).(closure #1)"
+                  moduleName = "login"
+                  urlString = "file:///Users/anthonyrodriguez1/Code/ios/login/login/login/ViewController.swift"
+                  timestampString = "449279295.938987"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "3290">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "login.ViewController.(viewDidLoad (login.ViewController) -&gt; () -&gt; ()).(closure #1)"
+                  moduleName = "login"
+                  urlString = "file:///Users/anthonyrodriguez1/Code/ios/login/login/login/ViewController.swift"
+                  timestampString = "449279295.939123"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "3348">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

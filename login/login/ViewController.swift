@@ -24,7 +24,7 @@ class ViewController: UIViewController {
             
             let strData = NSString(data: data, encoding: NSUTF8StringEncoding)
             var err: NSError?
-            let json = NSJSONSerialization.JSONObjectWithData(data, options: .MutableLeaves, error: &err) as NSDictionary?
+            let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &err) as NSDictionary?
             
 //            println(json!)
             
@@ -35,7 +35,15 @@ class ViewController: UIViewController {
 //                we still need to check wheather the json variable has a value using the 
 //                optional binding
                 if let parseJSON = json {
-                    println(parseJSON["results"]["address_components"])
+                    if let results = parseJSON["results"] as? NSArray {
+                        for component in results{
+                            let address = component["address_components"] as NSArray
+                            for add in address {
+                                println(add["long_name"])
+                            }
+                        }
+                    }
+                    
                 }
             
             }
