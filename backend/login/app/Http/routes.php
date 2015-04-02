@@ -20,6 +20,12 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
+Route::get("me", array('before'=>'oauth', function(){
+
+	dd("Working!");
+
+}));
+
 
 Route::post('oauth/access_token', function() {
     return Response::json(Authorizer::issueAccessToken());
