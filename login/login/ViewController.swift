@@ -13,43 +13,13 @@ import Foundation
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var password: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = "https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA"
-        let requestURL = NSURL(string: url)
-        let request = NSURLRequest(URL: requestURL!)
-        let session = NSURLSession.sharedSession()
-        let downloadTask = session.dataTaskWithRequest(request, completionHandler: { (data: NSData!, response: NSURLResponse!, error: NSError!) -> Void in
-            
-            let strData = NSString(data: data, encoding: NSUTF8StringEncoding)
-            var err: NSError?
-            let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &err) as NSDictionary?
-            
-//            println(json!)
-            
-            if(err != nil){
-                //println(err!.localizedDescription)
-            }
-            else {
-//                we still need to check wheather the json variable has a value using the 
-//                optional binding
-                if let parseJSON = json {
-                    if let results = parseJSON["results"] as? NSArray {
-                        for component in results{
-                            let address = component["address_components"] as NSArray
-                            for add in address {
-                                println(add["long_name"])
-                            }
-                        }
-                    }
-                    
-                }
-            
-            }
-            
-        })
-        downloadTask.resume()
+        
         
 
         // Do any additional setup after loading the view, typically from a nib.
@@ -60,6 +30,25 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func SignInPressed(sender: AnyObject) {
+       
+        let url = "http://homestead.app/home"
+        let nsUrl = NSURL(string: url)
+        let request = NSMutableURLRequest(URL: nsUrl!)
+        let credentials = NSString(string: "AnthonyRodriguez.itt@gmail.com:123456")
+        let loginData: NSData = credentials.dataUsingEncoding(NSUTF8StringEncoding)!
+        let loginData64 = loginData.base64EncodedDataWithOptions(nil)
+        request.HTTPMethod = "POST"
+        request.setValue("Basic \(loginData64)", forHTTPHeaderField: "Authorization")
+        let session = NSURLSession.sharedSession()
+        let downloadTask = session.dataTaskWithRequest(request, completionHandler: { (data: NSData!, response: NSURLResponse!, error: NSError!) -> Void in
+            println(response)
+            
+        })
+        downloadTask.resume()
+        
+        
+    }
 
 }
 
