@@ -25,18 +25,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
-        
-        
-        
         // Dispose of any resources that can be recreated.
     }
     
@@ -44,7 +37,7 @@ class ViewController: UIViewController {
         if (segue.identifier == "homeSegue") {
             var svc = segue.destinationViewController as HomeController;
             
-            svc.name.text = self.res
+            svc.nameString = self.res
             
         }
     }
@@ -67,6 +60,9 @@ class ViewController: UIViewController {
             let result = NSString(data: data, encoding: NSUTF8StringEncoding)
             println(result)
             self.res = result
+            NSOperationQueue.mainQueue().addOperationWithBlock {
+                self.performSegueWithIdentifier("homeSegue", sender: self)
+            }
         }
         
         task.resume()

@@ -38,7 +38,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lpp-3V-lJZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="164" y="1051"/>
+            <point key="canvasLocation" x="281" y="1192"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -94,7 +94,7 @@
                     <connections>
                         <outlet property="email" destination="IF5-2D-xhy" id="IjL-9f-9t7"/>
                         <outlet property="password" destination="PXG-Ln-PJF" id="pgT-dw-Agl"/>
-                        <segue destination="9dl-9b-4Sv" kind="show" identifier="homeSegue" id="J9a-wE-3Aw"/>
+                        <segue destination="9dl-9b-4Sv" kind="showDetail" identifier="homeSegue" id="J9a-wE-3Aw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
