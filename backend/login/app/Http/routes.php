@@ -20,12 +20,13 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
-Route::get("me", array('before'=>'oauth', function(){
+Route::get("me", array('before'=>'oauth', function(Request $request){
 
-	dd("Working!");
+
+	$user = \App\User::find(Authorizer::getResourceOwnerId());
+	return Response::json(['name' => $user->name]);
 
 }));
-
 
 Route::post('oauth/access_token', function() {
     return Response::json(Authorizer::issueAccessToken());
