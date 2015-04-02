@@ -21,16 +21,32 @@ class ViewController: UIViewController {
     let client_secret = "rlLlSVoUBGJ37NM61zOuK1mvRBwKstmg"
     let api_url = "http://homestead.app/oauth/access_token"
     var access_token: String?
+    var res:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        
+        
+        
+        
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "homeSegue") {
+            var svc = segue.destinationViewController as HomeController;
+            
+            svc.name.text = self.res
+            
+        }
     }
 
     @IBAction func SignInPressed(sender: AnyObject) {
@@ -50,6 +66,7 @@ class ViewController: UIViewController {
             let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &error) as? NSDictionary
             let result = NSString(data: data, encoding: NSUTF8StringEncoding)
             println(result)
+            self.res = result
         }
         
         task.resume()
