@@ -9,9 +9,9 @@
 import Foundation
 
 
-class LoginProcessor {
+class PasswordLoginProcessor {
     
-    func doLogin (email: String, password: String){
+    init(username: String, password: String){
         
     }
     

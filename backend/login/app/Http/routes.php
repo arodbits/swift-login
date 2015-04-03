@@ -20,8 +20,8 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
+//Profile information about the user
 Route::get("me", array('before'=>'oauth', function(Request $request){
-
 
 	$user = \App\User::find(Authorizer::getResourceOwnerId());
 	return Response::json(['name' => $user->name]);

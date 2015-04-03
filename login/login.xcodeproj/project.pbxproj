@@ -23,7 +23,8 @@
 		AE0EF5611AC60ABA00A1FF9E /* DeathtoStock_Wired7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE0EF5571AC60ABA00A1FF9E /* DeathtoStock_Wired7.jpg */; };
 		AE0EF5621AC60ABA00A1FF9E /* DeathtoStock_Wired8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE0EF5581AC60ABA00A1FF9E /* DeathtoStock_Wired8.jpg */; };
 		AE0EF5631AC60ABA00A1FF9E /* DeathtoStock_Wired9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE0EF5591AC60ABA00A1FF9E /* DeathtoStock_Wired9.jpg */; };
-		AE6F5AC11ACC8A42007CC2B6 /* LoginProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6F5AC01ACC8A42007CC2B6 /* LoginProcessor.swift */; };
+		AE676CBF1ACEC65C002D2396 /* ApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE676CBE1ACEC65C002D2396 /* ApiHandler.swift */; };
+		AE6F5AC11ACC8A42007CC2B6 /* PasswordLoginProcesor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6F5AC01ACC8A42007CC2B6 /* PasswordLoginProcesor.swift */; };
 		AE6F5ACB1ACDFC5E007CC2B6 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6F5ACA1ACDFC5E007CC2B6 /* HomeController.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,7 +60,8 @@
 		AE0EF5581AC60ABA00A1FF9E /* DeathtoStock_Wired8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DeathtoStock_Wired8.jpg; sourceTree = "<group>"; };
 		AE0EF5591AC60ABA00A1FF9E /* DeathtoStock_Wired9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DeathtoStock_Wired9.jpg; sourceTree = "<group>"; };
 		AE0EF5681AC637C600A1FF9E /* Tester.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Tester.playground; sourceTree = "<group>"; };
-		AE6F5AC01ACC8A42007CC2B6 /* LoginProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginProcessor.swift; sourceTree = "<group>"; };
+		AE676CBE1ACEC65C002D2396 /* ApiHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiHandler.swift; sourceTree = "<group>"; };
+		AE6F5AC01ACC8A42007CC2B6 /* PasswordLoginProcesor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordLoginProcesor.swift; sourceTree = "<group>"; };
 		AE6F5ACA1ACDFC5E007CC2B6 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeController.swift; path = ../HomeController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,7 +112,8 @@
 				AE0EF5361AC5FF3600A1FF9E /* Images.xcassets */,
 				AE0EF5381AC5FF3600A1FF9E /* LaunchScreen.xib */,
 				AE0EF52D1AC5FF3600A1FF9E /* Supporting Files */,
-				AE6F5AC01ACC8A42007CC2B6 /* LoginProcessor.swift */,
+				AE6F5AC01ACC8A42007CC2B6 /* PasswordLoginProcesor.swift */,
+				AE676CBE1ACEC65C002D2396 /* ApiHandler.swift */,
 			);
 			path = login;
 			sourceTree = "<group>";
@@ -270,7 +273,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE6F5ACB1ACDFC5E007CC2B6 /* HomeController.swift in Sources */,
-				AE6F5AC11ACC8A42007CC2B6 /* LoginProcessor.swift in Sources */,
+				AE6F5AC11ACC8A42007CC2B6 /* PasswordLoginProcesor.swift in Sources */,
+				AE676CBF1ACEC65C002D2396 /* ApiHandler.swift in Sources */,
 				AE0EF5321AC5FF3600A1FF9E /* ViewController.swift in Sources */,
 				AE0EF5301AC5FF3600A1FF9E /* AppDelegate.swift in Sources */,
 			);
