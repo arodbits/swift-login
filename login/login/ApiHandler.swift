@@ -34,19 +34,16 @@ class ApiHandler {
         let accessTokenUrl = NSURL(string: "oauth/access_token", relativeToURL: baseUrl)
         if username != " " && password != " " {
             let params = LoginWithPasswordParams(username: username, password: password, url: accessTokenUrl!)
-            
-            let request = self.postRequest(params)
-            
+            let request = self.accessTokenPostRequest(params)
             let task = session.dataTaskWithRequest(request, completionHandler: { (data: NSData!, response: NSURLResponse!, error: NSError!) -> Void in
-                //self.postRequestCompletionHandler(data, error: error, response: response)
-                //      If not error is present during the communication, we're good to go!
+//              No errors
                 if error == nil
                 {
-//                  Check the code from the response
+//                  Check the status code
                     let HTTPResponse = response as NSHTTPURLResponse?
                     if let res = HTTPResponse
                     {
-//                      Successfully: The username and Password are correct
+//                      Successfully (200): The username and Password are correct
                         if res.statusCode == 200
                         {
                             var er: NSError?
@@ -56,7 +53,8 @@ class ApiHandler {
                                 handler(access_token: jsonResult["access_token"] as? String, error: nil)
                             }
                         }
-                        else
+//                      Unauthorized: (401)
+                        else if res.statusCode == 401
                         {
 //                          Error
                             handler(access_token: nil, error: "The username or password is not correct. Try again, please.")
@@ -69,20 +67,31 @@ class ApiHandler {
         }
     }
     
-    func me(){
-        
-    }
-    func getRequest(){
+    func me(handler: (name: String)->Void){
+        println("working")
         let meURL = NSURL(string: "/me", relativeToURL: self.baseUrl)
-        let request = NSMutableURLRequest(URL: meURL!)
-        request.HTTPMethod = "GET"
-        request.setValue("Bearer \(self.access_token)", forHTTPHeaderField: "Authorization")
+        let request = self.getRequest(meURL!)
+        var er: NSError?
+        
         let task = session.dataTaskWithRequest(request, completionHandler: { (data: NSData!, response: NSURLResponse!, error: NSError!) -> Void in
-            println(NSString(data: data, encoding: NSUTF8StringEncoding))
+            //println(NSString(data: data, encoding: NSUTF8StringEncoding))
+            let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &er) as? NSDictionary
+            if let jsonResult = json {
+                
+                handler(name: jsonResult["name"] as String!)
+            }
         })
+        task.resume()
     }
     
-    func postRequest(params: LoginWithPasswordParams)->NSURLRequest{
+    func getRequest(url: NSURL)-> NSMutableURLRequest{
+        let request = NSMutableURLRequest(URL: url)
+        request.HTTPMethod = "GET"
+        request.setValue("Bearer \(self.access_token!)", forHTTPHeaderField: "Authorization")
+        return request
+    }
+    
+    func accessTokenPostRequest(params: LoginWithPasswordParams)->NSURLRequest{
         let request     = NSMutableURLRequest(URL: params.url)
         let username    = params.username
         let password    = params.password
@@ -91,7 +100,4 @@ class ApiHandler {
         request.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding)
         return request
     }
-    
-//    func postRequestCompletionHandler (data: NSData?, error: NSError?, response: NSURLResponse?){
-//    }
 }

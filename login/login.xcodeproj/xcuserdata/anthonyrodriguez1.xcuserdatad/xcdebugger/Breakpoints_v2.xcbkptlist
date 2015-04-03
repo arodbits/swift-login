@@ -17,6 +17,36 @@
             endingLineNumber = "35"
             landmarkName = "getAccessToken(_:password:handler:)"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "login.ApiHandler.getAccessToken (login.ApiHandler)(Swift.String, password : Swift.String, handler : (access_token : Swift.Optional&lt;Swift.String&gt;, error : Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "login"
+                  urlString = "file:///Users/anthonyrodriguez1/Code/ios/login/login/login/ApiHandler.swift"
+                  timestampString = "449794060.043342"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "351">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "login.ApiHandler.getAccessToken (login.ApiHandler)(Swift.String, password : Swift.String, handler : (access_token : Swift.Optional&lt;Swift.String&gt;, error : Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "login"
+                  urlString = "file:///Users/anthonyrodriguez1/Code/ios/login/login/login/ApiHandler.swift"
+                  timestampString = "449794060.043491"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "1153">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -26,12 +56,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "login/ApiHandler.swift"
-            timestampString = "449789775.130053"
+            timestampString = "449793836.485406"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
-            landmarkName = "postRequest(_:)"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "accessTokenPostRequest(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -42,11 +72,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "login/ApiHandler.swift"
-            timestampString = "449786313.823246"
+            timestampString = "449793587.593769"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "getAccessToken(_:password:handler:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -58,12 +88,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "login/ApiHandler.swift"
-            timestampString = "449789775.130053"
+            timestampString = "449793587.593769"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "getAccessToken(_:password:handler:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "login/ApiHandler.swift"
+            timestampString = "449793836.485406"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "getRequest(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "login/ApiHandler.swift"
+            timestampString = "449793836.485406"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "getRequest(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
