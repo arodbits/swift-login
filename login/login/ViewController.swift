@@ -47,17 +47,26 @@ class ViewController: UIViewController {
         if email.hasText() && password.hasText()
         {
             api.getAccessToken(email.text, password: password.text, {(access_token: String?, error: String?) -> Void in
-                if error == nil
+                println(error)
+                if error != nil
+                {
+                    println("bad request")
+                    NSOperationQueue.mainQueue().addOperationWithBlock({
+                        let alert = UIAlertController(title: "I'm Sorry", message: error, preferredStyle: UIAlertControllerStyle.Alert)
+                        alert.addAction(UIAlertAction(title: "Dismiss", style:UIAlertActionStyle.Default, handler: nil))
+                        self.presentViewController(alert, animated: true, completion: nil)
+                    })
+                }
+                else
                 {
                     println(access_token)
+                    //api.getRequest()
                 }
-                NSOperationQueue.mainQueue().addOperationWithBlock({
-                    let alert = UIAlertController(title: "I'm Sorry", message: error, preferredStyle: UIAlertControllerStyle.Alert)
-                    alert.addAction(UIAlertAction(title: "Dismiss", style:UIAlertActionStyle.Default, handler: nil))
-                    self.presentViewController(alert, animated: true, completion: nil)
-                })
+                
+            
             })
         }
+        
     }
 }
 

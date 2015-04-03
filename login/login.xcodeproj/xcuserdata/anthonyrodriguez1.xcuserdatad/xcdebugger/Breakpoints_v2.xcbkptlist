@@ -10,43 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "login/ApiHandler.swift"
-            timestampString = "449769217.76523"
+            timestampString = "449786313.823246"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "getAccessToken(_:password:handler:)"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "login.ApiHandler.getAccessToken (login.ApiHandler)(Swift.String, password : Swift.String) -&gt; (error : Swift.Optional&lt;Swift.String&gt;, accessToken : Swift.Optional&lt;Swift.String&gt;)"
-                  moduleName = "login"
-                  urlString = "file:///Users/anthonyrodriguez1/Code/ios/login/login/login/ApiHandler.swift"
-                  timestampString = "449771703.418226"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "330">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "login.ApiHandler.getAccessToken (login.ApiHandler)(Swift.String, password : Swift.String) -&gt; (error : Swift.Optional&lt;Swift.String&gt;, accessToken : Swift.Optional&lt;Swift.String&gt;)"
-                  moduleName = "login"
-                  urlString = "file:///Users/anthonyrodriguez1/Code/ios/login/login/login/ApiHandler.swift"
-                  timestampString = "449771703.418423"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "1132">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -56,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "login/ApiHandler.swift"
-            timestampString = "449775348.586982"
+            timestampString = "449789775.130053"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "postRequest(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -72,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "login/ApiHandler.swift"
-            timestampString = "449774519.826824"
+            timestampString = "449786313.823246"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "getAccessToken(_:password:handler:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -88,43 +58,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "login/ApiHandler.swift"
-            timestampString = "449775348.586982"
+            timestampString = "449789775.130053"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
             landmarkName = "getAccessToken(_:password:handler:)"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "login.ApiHandler.getAccessToken (login.ApiHandler)(Swift.String, password : Swift.String) -&gt; (error : Swift.Optional&lt;Swift.String&gt;, accessToken : Swift.Optional&lt;Swift.String&gt;)"
-                  moduleName = "login"
-                  urlString = "file:///Users/anthonyrodriguez1/Code/ios/login/login/login/ApiHandler.swift"
-                  timestampString = "449771703.544646"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "1656">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "reabstraction thunk helper from @callee_owned (@owned ObjectiveC.NSData, @owned ObjectiveC.NSError, @owned ObjectiveC.NSURLResponse) -&gt; (@unowned ()) to @callee_owned (@in (ObjectiveC.NSData, ObjectiveC.NSError, ObjectiveC.NSURLResponse)) -&gt; (@out ())"
-                  moduleName = "login"
-                  urlString = "file:///Users/anthonyrodriguez1/Code/ios/login/login/login/ApiHandler.swift"
-                  timestampString = "449771703.544882"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "18">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
