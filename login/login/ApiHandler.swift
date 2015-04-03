@@ -43,7 +43,7 @@ class ApiHandler {
                     //          Check the code from the response
                     let HTTPResponse = response as NSHTTPURLResponse?
                     if let res = HTTPResponse {
-//                      Successfully
+//                      Successfully: The username and Password are correct
                         if res.statusCode == 200 {
                             var er: NSError?
                             println("working good!")
@@ -53,7 +53,7 @@ class ApiHandler {
                             }
                         }
 //                      Error
-                        handler(access_token: nil, error: "Error trying to get the Access Token")
+                        handler(access_token: nil, error: "The username or password is not correct. Try again, please.")
                     }
                 }
 
