@@ -17,14 +17,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DeathtoStock_Wired2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="qSN-eg-qVp">
+                                <rect key="frame" x="0.0" y="0.0" width="620" height="606"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WELCOME!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XhP-II-0hS">
-                                <rect key="frame" x="45" y="46" width="330" height="115"/>
+                                <rect key="frame" x="45" y="46" width="298" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.91388494318181812" green="0.91388494318181812" blue="0.91388494318181812" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.15686274510000001" green="0.18039215689999999" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TC0-no-vlS">
-                                <rect key="frame" x="45" y="140" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TC0-no-vlS">
+                                <rect key="frame" x="45" y="91" width="224" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -103,5 +107,6 @@
     </scenes>
     <resources>
         <image name="DeathtoStock_Wired1.jpg" width="3625" height="5437"/>
+        <image name="DeathtoStock_Wired2.jpg" width="5300" height="3534"/>
     </resources>
 </document>

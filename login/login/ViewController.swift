@@ -23,14 +23,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-//        if (segue.identifier == "homeSegue") {
-//            var svc = segue.destinationViewController as HomeController;
-//            
-//            svc.nameString = self.res
-//            
-//        }
-//    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "homeSegue"){
+            var homeViewController = segue.destinationViewController as HomeController
+            homeViewController.nameHolder = sender as? String
+        }
+    }
 
     @IBAction func SignInPressed(sender: AnyObject) {
         let api = ApiHandler()
@@ -48,14 +46,17 @@ class ViewController: UIViewController {
                 else
                 {
                     api.me({(name: String)-> Void in
-                        println(name)
+                        NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                            self.performSegueWithIdentifier("homeSegue", sender: name)
+                        })
                     })
                 }
-                
-            
             })
         }
-        
     }
+    
+    
+    
+    
 }
 
