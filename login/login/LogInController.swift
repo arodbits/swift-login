@@ -8,7 +8,7 @@
 import UIkit
 import Foundation
 
-class ViewController: UIViewController {
+class LogInController: UIViewController {
 
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
@@ -24,10 +24,18 @@ class ViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "homeSegue"){
+        if (segue.identifier == "loginToHome"){
             var homeViewController = segue.destinationViewController as HomeController
             homeViewController.nameHolder = sender as? String
         }
+        if (segue.identifier == "loginToSignup"){
+            var homeViewController = segue.destinationViewController as SignUpController
+        }
+    }
+    @IBAction func signUpPressed(sender: AnyObject) {
+        NSOperationQueue.mainQueue().addOperationWithBlock({
+            self.performSegueWithIdentifier("loginToSignup", sender: AnyObject?())
+        })
     }
 
     @IBAction func SignInPressed(sender: AnyObject) {
@@ -47,7 +55,7 @@ class ViewController: UIViewController {
                 {
                     api.me({(name: String)-> Void in
                         NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
-                            self.performSegueWithIdentifier("homeSegue", sender: name)
+                            self.performSegueWithIdentifier("loginToHome", sender: name)
                         })
                     })
                 }

@@ -25,12 +25,12 @@
                   symbolName = "login.ApiHandler.getAccessToken (login.ApiHandler)(Swift.String, password : Swift.String, handler : (access_token : Swift.Optional&lt;Swift.String&gt;, error : Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "login"
                   urlString = "file:///Users/anthonyrodriguez1/Code/ios/login/login/login/ApiHandler.swift"
-                  timestampString = "449794060.043342"
+                  timestampString = "449875080.145399"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "35"
                   endingLineNumber = "35"
-                  offsetFromSymbolStart = "351">
+                  offsetFromSymbolStart = "287">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -39,12 +39,12 @@
                   symbolName = "login.ApiHandler.getAccessToken (login.ApiHandler)(Swift.String, password : Swift.String, handler : (access_token : Swift.Optional&lt;Swift.String&gt;, error : Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "login"
                   urlString = "file:///Users/anthonyrodriguez1/Code/ios/login/login/login/ApiHandler.swift"
-                  timestampString = "449794060.043491"
+                  timestampString = "449875080.145596"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "35"
                   endingLineNumber = "35"
-                  offsetFromSymbolStart = "1153">
+                  offsetFromSymbolStart = "1010">
                </Location>
             </Locations>
          </BreakpointContent>

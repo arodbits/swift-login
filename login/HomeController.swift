@@ -18,7 +18,22 @@ class HomeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        NSOperationQueue.mainQueue().addOperationWithBlock({
+            self.performSegueWithIdentifier("homeToLogin", sender: AnyObject?())
+        })
+        
         name.text = nameHolder
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "homeToLogin"){
+//            var logInController = segue.destinationViewController as LogInController
+        }
+        else if (segue.identifier == "homeToLogin"){
+            //            var logInController = segue.destinationViewController as LogInController
+        }
     }
     
     override func didReceiveMemoryWarning() {
