@@ -25,7 +25,11 @@
                   symbolName = "login.ApiHandler.getAccessToken (login.ApiHandler)(Swift.String, password : Swift.String, handler : (access_token : Swift.Optional&lt;Swift.String&gt;, error : Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "login"
                   urlString = "file:///Users/anthonyrodriguez1/Code/ios/login/login/login/ApiHandler.swift"
+<<<<<<< HEAD
                   timestampString = "449944636.023643"
+=======
+                  timestampString = "449944538.422141"
+>>>>>>> newbranch
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "35"
@@ -39,7 +43,11 @@
                   symbolName = "login.ApiHandler.getAccessToken (login.ApiHandler)(Swift.String, password : Swift.String, handler : (access_token : Swift.Optional&lt;Swift.String&gt;, error : Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "login"
                   urlString = "file:///Users/anthonyrodriguez1/Code/ios/login/login/login/ApiHandler.swift"
+<<<<<<< HEAD
                   timestampString = "449944636.023985"
+=======
+                  timestampString = "449944538.42232"
+>>>>>>> newbranch
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "35"
