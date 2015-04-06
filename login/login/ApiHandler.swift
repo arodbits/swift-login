@@ -34,6 +34,7 @@ class ApiHandler {
         let accessTokenUrl = NSURL(string: "oauth/access_token", relativeToURL: baseUrl)
         if username != " " && password != " " {
             let params = LoginWithPasswordParams(username: username, password: password, url: accessTokenUrl!)
+            
             let request = self.accessTokenPostRequest(params)
             let task = session.dataTaskWithRequest(request, completionHandler: { (data: NSData!, response: NSURLResponse!, error: NSError!) -> Void in
 //              No errors
@@ -89,6 +90,18 @@ class ApiHandler {
         request.HTTPMethod = "GET"
         request.setValue("Bearer \(self.access_token!)", forHTTPHeaderField: "Authorization")
         return request
+    }
+    
+    func register(username: String, password: String){
+        let url = NSURL(string: "api/signup", relativeToURL: self.baseUrl)
+        let request = NSMutableURLRequest(URL: url!)
+        request.HTTPMethod = "POST"
+        let bodyData = "email=\(username)&password=\(password)"
+        request.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
+        let task = session.dataTaskWithRequest(request, completionHandler: { (data: NSData!, response: NSURLResponse!, error: NSError!) -> Void in
+            println(NSString(data: data, encoding: NSUTF8StringEncoding))
+        })
+        task.resume()
     }
     
     func accessTokenPostRequest(params: LoginWithPasswordParams)->NSURLRequest{

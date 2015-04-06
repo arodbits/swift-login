@@ -109,6 +109,9 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="signUpPressed:" destination="KZ0-Sf-Y3X" eventType="touchUpInside" id="o1Y-gz-Mi1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fas-wb-TDq">
                                 <rect key="frame" x="10" y="28" width="60" height="30"/>
@@ -148,6 +151,10 @@
                             <constraint firstItem="Fas-wb-TDq" firstAttribute="leading" secondItem="8zu-6T-RSD" secondAttribute="leadingMargin" constant="-6" id="xO6-d2-2O9"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailInput" destination="DUh-tf-ieA" id="hHN-Zh-s2t"/>
+                        <outlet property="passwordInput" destination="bRO-mx-4mf" id="3df-0C-muh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XQT-1J-LwM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

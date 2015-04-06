@@ -11,11 +11,15 @@
 |
 */
 
+use Illuminate\Http\Request;
+
 Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
 
-Route::get('api/register', '');
+Route::post('api/signup', function(Request $request){
+
+});
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
@@ -24,7 +28,6 @@ Route::controllers([
 
 //Profile information about the user
 Route::get("me", array('before'=>'oauth', function(Request $request){
-
 	$user = \App\User::find(Authorizer::getResourceOwnerId());
 	return Response::json(['name' => $user->name]);
 

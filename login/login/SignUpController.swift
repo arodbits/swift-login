@@ -11,9 +11,18 @@ import UIKit
 
 class SignUpController: UIViewController {
     
+    @IBOutlet weak var emailInput: UITextField!
+    @IBOutlet weak var passwordInput: UITextField!
+    
+    var api = ApiHandler()
+    
     @IBAction func cancelButtonPressed(sender: UIStoryboardSegue) {
         
         self.dismissViewControllerAnimated(true , completion: nil)
         
     }
+    @IBAction func signUpPressed(sender: UIButton) {
+        api.register(emailInput.text, password: passwordInput.text)
+    }
+   
 }
