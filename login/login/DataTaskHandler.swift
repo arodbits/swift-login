@@ -9,14 +9,11 @@
 import Foundation
 import UIKit
 
-
-
 class DataTaskHandler {
 
     let session = NSURLSession.sharedSession()
     
     func make (request: NSMutableURLRequest, handler: (result: NSData?, error: String?)->Void){
-        
         let task = session.dataTaskWithRequest(request, completionHandler: {(data: NSData!, response: NSURLResponse!, error: NSError!) -> Void in
 //          No errors
             if error == nil
@@ -33,6 +30,10 @@ class DataTaskHandler {
                     else if res.statusCode == 401
                     {
                         handler(result:nil, error: "Authorization error")
+                    }
+                    else if res.statusCode == 404
+                    {
+                        handler(result:nil, error: "The server couldn't be found. Please, contact the Administrator or try later.")
                     }
                 }
             }
