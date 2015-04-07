@@ -69,7 +69,6 @@ class ApiHandler {
     }
     
     func me(handler: (name: String)->Void){
-        println("working")
         let meURL = NSURL(string: "/me", relativeToURL: self.baseUrl)
         let request = self.getRequest(meURL!)
         var er: NSError?

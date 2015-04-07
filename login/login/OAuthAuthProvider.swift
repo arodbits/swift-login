@@ -10,9 +10,7 @@ import Foundation
 import UIKit
 
 enum RequestType {
-    
     case get, post
-
 }
 
 struct Credentials {
@@ -20,74 +18,52 @@ struct Credentials {
     var password: String
 }
 
-
-
-
-struct OAuthTokenRequest {
+struct OAuthToken {
     
     //  Define configuration variables
     let client_id       = "QldBvenYfVoOqGCT"
     let client_secret   = "rlLlSVoUBGJ37NM61zOuK1mvRBwKstmg"
     let grant_type      = "password"
+    let url: NSURL?
     
-    var bodyDataString: String {
-        return "grant_type=\(self.grant_type)&client_id=\(self.client_id)&client_secret=\(client_secret)&password=\(self.credentials.password)&username=\(self.credentials.password)"
+    var bodyDataString: NSData {
+        let bodyComposition = "grant_type=\(self.grant_type)&client_id=\(self.client_id)&client_secret=\(client_secret)&password=\(self.credentials.password)&username=\(self.credentials.password)"
+        return bodyComposition.dataUsingEncoding(NSUTF8StringEncoding)!
     }
     
     var credentials: Credentials
     
-    init(credentials: Credentials){
+    init(credentials: Credentials, baseUrl: NSURL){
         self.credentials = credentials
+        self.url = NSURL(string: "/access_token", relativeToURL: baseUrl)
     }
     
-    
-
-    
-    
+    func request(handler: (result: NSData?, error: String?)->Void){
+        let request = NSMutableURLRequest(URL: self.url!)
+        request.HTTPMethod = "POST"
+        request.HTTPBody = self.bodyDataString
+        let taskInstance = DataTaskHandler()
+//      Async call
+        taskInstance.make(request, handler: handler)
+    }
     
 }
-
 
 class OAuthAuthProvider {
 //  Base URL
     let baseUrl         = NSURL(string: "http://homestead.app/")
 
-
-//  Asynchronous call, returning a hanlder
-    func request(type: RequestType, request: NSMutableURLRequest, handler : ()?){
-        switch type
-        {
-            case .get :
-                
-            break
-            case .post :
-            
-            break
-        }
-    }
 //  Asynchronous call, returning a hanlder
     func getAccessToken(credentials: Credentials, handler: (token: String?, error: String?)){
-        
-//        url
-//        credentials
-//        parameters
-//        check the result
-//        return handlerWithAccessToken
-        
-        let url = NSURL(string: "http://homestead.app/oauth/access_token", relativeToURL: self.baseUrl)
-        let oauthTokenRequest = OAuthTokenRequest(credentials: credentials)
-        
-        self.request(type: RequestType.get, request: request, handler: {()->Void in
-        
-        })
-        
+        let oauthTokenInstance = OAuthToken(credentials: credentials, baseUrl: self.baseUrl!)
+        oauthTokenInstance.request { (result, error) -> Void in
+            
+        }
     }
 }
 
 
-let request     = NSMutableURLRequest(URL: params.url)
-let username    = params.username
-let password    = params.password
-let bodyData    = "grant_type=\(self.grant_type)&username=\(username)&password=\(password)&client_id=\(self.client_id)&client_secret=\(self.client_secret)"
-request.HTTPMethod = "POST"
-request.HTTPBody
+
+
+
+
