@@ -22,6 +22,11 @@ class LogInController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        
+        let appDedelegate: AppDelegate = (UIApplication.sharedApplication()).delegate as AppDelegate
+        
+        
+        
         // Dispose of any resources that can be recreated.
     }
     
