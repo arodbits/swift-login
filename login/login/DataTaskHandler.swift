@@ -20,6 +20,7 @@ class DataTaskHandler {
             {
 //              Check the status code
                 let HTTPResponse = response as NSHTTPURLResponse?
+                println(HTTPResponse)
                 if let res = HTTPResponse
                 {
 //                  Successfully (200): The username and Password are correct
@@ -29,7 +30,7 @@ class DataTaskHandler {
                     }
                     else if res.statusCode == 401
                     {
-                        handler(result:nil, error: "Authorization error")
+                        handler(result:nil, error: "Access Denied. Email or password are wrong")
                     }
                     else if res.statusCode == 404
                     {
