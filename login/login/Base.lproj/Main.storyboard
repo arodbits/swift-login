@@ -65,7 +65,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lpp-3V-lJZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-440" y="161"/>
+            <point key="canvasLocation" x="-460" y="151"/>
         </scene>
         <!--Sign Up Controller-->
         <scene sceneID="T1h-Ko-AfC">
@@ -158,7 +158,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XQT-1J-LwM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="399" y="878"/>
+            <point key="canvasLocation" x="607" y="898"/>
         </scene>
         <!--Log In Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -210,6 +210,11 @@
                                     <action selector="signUpPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dPv-P4-rGR"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="4qQ-Kq-70z">
+                                <rect key="frame" x="290" y="354" width="20" height="20"/>
+                                <rect key="contentStretch" x="1.3877787807814457e-17" y="0.0" width="1" height="1"/>
+                                <color key="color" red="0.48575390812859898" green="0.25892966775576554" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.99469302400000004" green="0.99469302400000004" blue="0.99469302400000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -220,8 +225,10 @@
                             <constraint firstAttribute="centerX" secondItem="BXR-uK-jFr" secondAttribute="centerX" id="USS-jA-BhM"/>
                             <constraint firstItem="PXG-Ln-PJF" firstAttribute="top" secondItem="IF5-2D-xhy" secondAttribute="bottom" constant="15" id="XOe-w6-kgi"/>
                             <constraint firstAttribute="centerY" secondItem="BXR-uK-jFr" secondAttribute="centerY" constant="-193" id="XzR-eI-Gbo"/>
+                            <constraint firstAttribute="centerY" secondItem="4qQ-Kq-70z" secondAttribute="centerY" constant="-64" id="aOT-SG-acU"/>
                             <constraint firstItem="VqA-ID-zk4" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="49" id="h2b-j6-vQV"/>
                             <constraint firstAttribute="centerX" secondItem="PXG-Ln-PJF" secondAttribute="centerX" constant="-1.5" id="ifu-EJ-z2L"/>
+                            <constraint firstAttribute="centerX" secondItem="4qQ-Kq-70z" secondAttribute="centerX" id="ihN-Za-ozl"/>
                             <constraint firstItem="PXG-Ln-PJF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="10" id="jDj-4V-6YU"/>
                             <constraint firstItem="IF5-2D-xhy" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="9" id="lBp-QR-89e"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PXG-Ln-PJF" secondAttribute="trailing" constant="7" id="vEr-Zu-coS"/>
@@ -230,6 +237,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="4qQ-Kq-70z" id="4sU-Vg-57i"/>
                         <outlet property="email" destination="IF5-2D-xhy" id="IjL-9f-9t7"/>
                         <outlet property="password" destination="PXG-Ln-PJF" id="pgT-dw-Agl"/>
                         <segue destination="KZ0-Sf-Y3X" kind="show" identifier="loginToSignup" id="5nc-cv-ECO"/>
@@ -238,7 +246,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="399" y="54"/>
+            <point key="canvasLocation" x="558" y="34"/>
         </scene>
     </scenes>
     <resources>

@@ -82,6 +82,8 @@ class OAuthAuthProvider {
         let url = NSURL(string: "/me", relativeToURL: self.baseUrl)
         let request = NSMutableURLRequest(URL: url!)
         request.HTTPMethod = "GET"
+
+        // The request if valid only if the access_token exists
         if let t = self.access_token {
             request.setValue("Bearer \(t)", forHTTPHeaderField: "Authorization")
             let taskInstance = DataTaskHandler()

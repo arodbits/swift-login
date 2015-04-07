@@ -12,8 +12,10 @@ class LogInController: UIViewController {
 
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
-
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
+        self.activityIndicatorView.hidesWhenStopped = true
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -39,15 +41,19 @@ class LogInController: UIViewController {
     }
 
     @IBAction func SignInPressed(sender: AnyObject) {
-//        let api = ApiHandler()
+        //let api = ApiHandler()
         let auth = OAuthAuthProvider()
         if email.hasText() && password.hasText()
         {
+            self.activityIndicatorView.startAnimating()
             let credentials = Credentials(username: email.text, password: password.text)
             auth.getAccessToken(credentials, handler: { (token, error) -> Void in
+                self.mainDispatcher({ () -> Void in
+                    self.activityIndicatorView.stopAnimating()
+                })
                 if error != nil
                 {
-                    NSOperationQueue.mainQueue().addOperationWithBlock({
+                    self.mainDispatcher({ () -> Void in
                         let alert = UIAlertController(title: "I'm Sorry", message: error, preferredStyle: UIAlertControllerStyle.Alert)
                         alert.addAction(UIAlertAction(title: "Dismiss", style:UIAlertActionStyle.Default, handler: nil))
                         self.presentViewController(alert, animated: true, completion: nil)
@@ -56,7 +62,7 @@ class LogInController: UIViewController {
                 else
                 {
                     auth.me({ (name) -> Void in
-                        NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                        self.mainDispatcher({ () -> Void in
                             self.performSegueWithIdentifier("loginToHome", sender: name)
                         })
                     })
@@ -64,5 +70,14 @@ class LogInController: UIViewController {
             })
         }
     }
+    
+    func mainDispatcher(block: ()->Void){
+        NSOperationQueue.mainQueue().addOperationWithBlock({
+            block()
+        })
+    }
+    
 }
+
+
 
