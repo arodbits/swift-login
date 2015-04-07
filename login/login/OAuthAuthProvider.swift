@@ -21,8 +21,8 @@ struct Credentials {
 struct OAuthToken {
     
     //  Define configuration variables
-    let client_id       = "QldBvenYfVoOqGCT"
-    let client_secret   = "rlLlSVoUBGJ37NM61zOuK1mvRBwKstmg"
+    let client_id       = "In9wHQ4qXx0y5P8x"
+    let client_secret   = "feyBl72EySihY3xxzmSFeDGcsibTwMvk"
     let grant_type      = "password"
     let url: NSURL?
     
