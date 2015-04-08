@@ -7,6 +7,7 @@
 //
 import UIkit
 import Foundation
+import CoreData
 
 class LogInController: UIViewController {
 
@@ -16,6 +17,29 @@ class LogInController: UIViewController {
     
     override func viewDidLoad() {
         self.activityIndicatorView.hidesWhenStopped = true
+        
+        let managedObjectContext = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext
+        let entityDescription = NSEntityDescription.entityForName("Users", inManagedObjectContext: managedObjectContext!)
+        
+        let users = NSManagedObject(entity: entityDescription!, insertIntoManagedObjectContext: managedObjectContext)
+        
+        users.setValue("Anthony", forKey: "name")
+
+        var error: NSError?
+        if (managedObjectContext?.save(&error) == nil){
+              println("Could not save \(error), \(error?.userInfo)")
+        }
+        
+        let request = NSFetchRequest(entityName: "Users")
+        let fetchedRequest = managedObjectContext?.executeFetchRequest(request, error: &error) as [NSManagedObject]?
+        if let result = fetchedRequest {
+            let person = result[0]
+            println(person.valueForKey("name") as String?)
+
+        }else {
+            println("Could not fetch \(error), \(error!.userInfo)")
+        }
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -24,9 +48,7 @@ class LogInController: UIViewController {
         super.didReceiveMemoryWarning()
         
         let appDedelegate: AppDelegate = (UIApplication.sharedApplication()).delegate as AppDelegate
-        
-        
-        
+
         // Dispose of any resources that can be recreated.
     }
     

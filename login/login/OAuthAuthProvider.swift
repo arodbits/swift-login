@@ -53,8 +53,6 @@ struct OAuthToken {
     }
 }
 
-
-
 class OAuthAuthProvider {
     
     //Base URL

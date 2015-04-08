@@ -14,7 +14,7 @@ class SignUpController: UIViewController {
     @IBOutlet weak var emailInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
     
-    var api = ApiHandler()
+   
     
     @IBAction func cancelButtonPressed(sender: UIStoryboardSegue) {
         
@@ -22,7 +22,7 @@ class SignUpController: UIViewController {
         
     }
     @IBAction func signUpPressed(sender: UIButton) {
-        api.register(emailInput.text, password: passwordInput.text)
+       
     }
    
 }
