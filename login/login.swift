@@ -1,5 +1,5 @@
 //
-//  Users.swift
+//  login.swift
 //  login
 //
 //  Created by Anthony Rodriguez on 4/8/15.
@@ -7,12 +7,11 @@
 //
 
 import Foundation
-import UIKit
 import CoreData
 
-class Users: NSManagedObject {
-    
-    @NSManaged var name : NSString
-    @NSManaged var access_token : NSString
-    
+class login: NSManagedObject {
+
+    @NSManaged var access_token: String
+    @NSManaged var name: String
+
 }

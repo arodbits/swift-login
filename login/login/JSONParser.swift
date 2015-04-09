@@ -13,7 +13,7 @@ import UIKit
 class JSONParser {
     
     let json: AnyObject?
-    let error: NSError?
+    var error: NSError?
     
     init(data: NSData){
         self.json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &error)

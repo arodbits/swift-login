@@ -5,9 +5,10 @@
 //  Created by Anthony Rodriguez on 3/27/15.
 //  Copyright (c) 2015 capitalofcode. All rights reserved.
 //
-import UIkit
+
 import Foundation
 import CoreData
+import UIKit
 
 class LogInController: UIViewController {
 
@@ -18,23 +19,26 @@ class LogInController: UIViewController {
     override func viewDidLoad() {
         self.activityIndicatorView.hidesWhenStopped = true
         
-        let managedObjectContext = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext
-        let entityDescription = NSEntityDescription.entityForName("Users", inManagedObjectContext: managedObjectContext!)
+//        let managedObjectContext = (UIApplication.sharedApplication().delegate as? AppDelegate)!.managedObjectContext
+        //let db = DB()
+        //let managedObjectContext = db.managedObjectContext
+        //let entityDescription = NSEntityDescription.entityForName("Users", inManagedObjectContext: managedObjectContext!)
         
-        let users = NSManagedObject(entity: entityDescription!, insertIntoManagedObjectContext: managedObjectContext)
+        //let users = UserProvider(entity: entityDescription!, insertIntoManagedObjectContext: managedObjectContext)
         
-        users.setValue("Anthony", forKey: "name")
-
+       let users = UserProvider()
+        users.entity?.setValue("Carlos", forKey: "name")
+//
         var error: NSError?
-        if (managedObjectContext?.save(&error) == nil){
+        if (users.context?.save(&error) == nil){
               println("Could not save \(error), \(error?.userInfo)")
         }
-        
+
         let request = NSFetchRequest(entityName: "Users")
-        let fetchedRequest = managedObjectContext?.executeFetchRequest(request, error: &error) as [NSManagedObject]?
+        let fetchedRequest = users.context?.executeFetchRequest(request, error: &error)
         if let result = fetchedRequest {
-            let person = result[0]
-            println(person.valueForKey("name") as String?)
+            let person = result[fetchedRequest!.count-1]
+            println(person.valueForKey("name") as! String?)
 
         }else {
             println("Could not fetch \(error), \(error!.userInfo)")
@@ -47,18 +51,18 @@ class LogInController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
-        let appDedelegate: AppDelegate = (UIApplication.sharedApplication()).delegate as AppDelegate
+        let appDedelegate: AppDelegate = (UIApplication.sharedApplication()).delegate as! AppDelegate
 
         // Dispose of any resources that can be recreated.
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "loginToHome"){
-            var homeViewController = segue.destinationViewController as HomeController
+            var homeViewController = segue.destinationViewController as! HomeController
             homeViewController.nameHolder = sender as? String
         }
         if (segue.identifier == "loginToSignup"){
-            var homeViewController = segue.destinationViewController as SignUpController
+            var homeViewController = segue.destinationViewController as! SignUpController
         }
     }
     @IBAction func signUpPressed(sender: AnyObject) {

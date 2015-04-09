@@ -1,5 +1,5 @@
 //
-//  Users.swift
+//  UserProvider.swift
 //  login
 //
 //  Created by Anthony Rodriguez on 4/8/15.
@@ -8,11 +8,15 @@
 
 import Foundation
 import UIKit
-import CoreData
 
-class Users: NSManagedObject {
+
+class UserProvider: Model{
     
     @NSManaged var name : NSString
     @NSManaged var access_token : NSString
     
+    init(){
+        super.init(table: "Users")
+    }
+
 }

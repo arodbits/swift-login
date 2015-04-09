@@ -19,7 +19,7 @@ class DataTaskHandler {
             if error == nil
             {
 //              Check the status code
-                let HTTPResponse = response as NSHTTPURLResponse?
+                let HTTPResponse = response as! NSHTTPURLResponse?
                 println(HTTPResponse)
                 if let res = HTTPResponse
                 {

@@ -1,5 +1,5 @@
 //
-//  Users.swift
+//  Visa_types.swift
 //  login
 //
 //  Created by Anthony Rodriguez on 4/8/15.
@@ -7,12 +7,11 @@
 //
 
 import Foundation
-import UIKit
 import CoreData
 
-class Users: NSManagedObject {
-    
-    @NSManaged var name : NSString
-    @NSManaged var access_token : NSString
-    
+class Visa_types: NSManagedObject {
+
+    @NSManaged var id: NSNumber
+    @NSManaged var name: String
+
 }

@@ -2,17 +2,30 @@
 
 import Cocoa
 import Foundation
-var str = "Hello, playground"
 
 
+class Person{
+    
+    var name: String
+    
+    init(name: String, lastname: String){
+        self.name = name
+    }
+    
+}
 
-let url = "https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA"
+class Employee: Person{
+    
+    var lastname: String
+    
+    init(){
+        self.lastname = "Rodriguez"
+        super.init(name: "Anthony", lastname: self.lastname)
+        
+    }
+    
+}
 
-let requestURL = NSURL(string: url)
+let e = Employee()
 
-let sharedSession = NSURLSession.sharedSession()
-let downloadTask = sharedSession.downloadTaskWithURL(requestURL!, completionHandler: { (location: NSURL!, response: NSURLResponse!, error: NSError!) -> Void in
-    println(response)
-})
-downloadTask.resume()
 

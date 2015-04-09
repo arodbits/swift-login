@@ -85,7 +85,7 @@ class OAuthAuthProvider {
         if let t = self.access_token {
             request.setValue("Bearer \(t)", forHTTPHeaderField: "Authorization")
             let taskInstance = DataTaskHandler()
-            taskInstance.make(request, { (result, error) -> Void in
+            taskInstance.make(request, handler: { (result, error) -> Void in
                 if let res = result {
                     if let jsonDictionary = JSONParser(data: res).dictionary(){
                         let name = jsonDictionary["name"] as? String
