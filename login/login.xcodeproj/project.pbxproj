@@ -23,9 +23,8 @@
 		AE0EF5621AC60ABA00A1FF9E /* DeathtoStock_Wired8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE0EF5581AC60ABA00A1FF9E /* DeathtoStock_Wired8.jpg */; };
 		AE0EF5631AC60ABA00A1FF9E /* DeathtoStock_Wired9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE0EF5591AC60ABA00A1FF9E /* DeathtoStock_Wired9.jpg */; };
 		AE1A860B1AD5DCE2006BE0F2 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1A860A1AD5DCE2006BE0F2 /* Model.swift */; };
-		AE1A860D1AD5DE0C006BE0F2 /* UserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1A860C1AD5DE0C006BE0F2 /* UserProvider.swift */; };
+		AE1A860D1AD5DE0C006BE0F2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1A860C1AD5DE0C006BE0F2 /* User.swift */; };
 		AE1A860F1AD6018B006BE0F2 /* DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1A860E1AD6018A006BE0F2 /* DB.swift */; };
-		AE3A33A91AD5C9E00073C284 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3A33A81AD5C9E00073C284 /* Users.swift */; };
 		AE4E7B971AD2F72800C9076B /* OAuthAuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4E7B961AD2F72800C9076B /* OAuthAuthProvider.swift */; };
 		AE4E7B991AD31D4500C9076B /* DataTaskHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4E7B981AD31D4500C9076B /* DataTaskHandler.swift */; };
 		AE4E7B9B1AD36C5400C9076B /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4E7B9A1AD36C5400C9076B /* JSONParser.swift */; };
@@ -67,9 +66,8 @@
 		AE0EF5591AC60ABA00A1FF9E /* DeathtoStock_Wired9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DeathtoStock_Wired9.jpg; sourceTree = "<group>"; };
 		AE0EF5681AC637C600A1FF9E /* Tester.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Tester.playground; sourceTree = "<group>"; };
 		AE1A860A1AD5DCE2006BE0F2 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		AE1A860C1AD5DE0C006BE0F2 /* UserProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProvider.swift; sourceTree = "<group>"; };
+		AE1A860C1AD5DE0C006BE0F2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AE1A860E1AD6018A006BE0F2 /* DB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DB.swift; sourceTree = "<group>"; };
-		AE3A33A81AD5C9E00073C284 /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		AE4E7B961AD2F72800C9076B /* OAuthAuthProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthAuthProvider.swift; sourceTree = "<group>"; };
 		AE4E7B981AD31D4500C9076B /* DataTaskHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTaskHandler.swift; sourceTree = "<group>"; };
 		AE4E7B9A1AD36C5400C9076B /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
@@ -180,9 +178,8 @@
 		AE3A33A51AD5C7130073C284 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AE3A33A81AD5C9E00073C284 /* Users.swift */,
 				AE1A860A1AD5DCE2006BE0F2 /* Model.swift */,
-				AE1A860C1AD5DE0C006BE0F2 /* UserProvider.swift */,
+				AE1A860C1AD5DE0C006BE0F2 /* User.swift */,
 				AE1A860E1AD6018A006BE0F2 /* DB.swift */,
 			);
 			name = Model;
@@ -334,8 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE4E7B971AD2F72800C9076B /* OAuthAuthProvider.swift in Sources */,
-				AE1A860D1AD5DE0C006BE0F2 /* UserProvider.swift in Sources */,
-				AE3A33A91AD5C9E00073C284 /* Users.swift in Sources */,
+				AE1A860D1AD5DE0C006BE0F2 /* User.swift in Sources */,
 				AE6F5ACB1ACDFC5E007CC2B6 /* HomeController.swift in Sources */,
 				AE4E7B991AD31D4500C9076B /* DataTaskHandler.swift in Sources */,
 				AE1A860F1AD6018B006BE0F2 /* DB.swift in Sources */,

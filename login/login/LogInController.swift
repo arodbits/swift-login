@@ -17,32 +17,22 @@ class LogInController: UIViewController {
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
     override func viewDidLoad() {
+        // activityIndicator is hidden when it's stopped
         self.activityIndicatorView.hidesWhenStopped = true
         
-//        let managedObjectContext = (UIApplication.sharedApplication().delegate as? AppDelegate)!.managedObjectContext
-        //let db = DB()
-        //let managedObjectContext = db.managedObjectContext
-        //let entityDescription = NSEntityDescription.entityForName("Users", inManagedObjectContext: managedObjectContext!)
+        let users = User()
+        users.name = "Josephx"
         
-        //let users = UserProvider(entity: entityDescription!, insertIntoManagedObjectContext: managedObjectContext)
+        if let error = users.save(){
+              println("Could not save \(error), \(error.userInfo)")
+        }
         
-       let users = UserProvider()
-        users.entity?.setValue("Carlos", forKey: "name")
-//
-        var error: NSError?
-        if (users.context?.save(&error) == nil){
-              println("Could not save \(error), \(error?.userInfo)")
+        if let allUsers: AnyObject = users.all().result{
+            println(allUsers.valueForKey("name"))
+        }else{
+        
         }
-
-        let request = NSFetchRequest(entityName: "Users")
-        let fetchedRequest = users.context?.executeFetchRequest(request, error: &error)
-        if let result = fetchedRequest {
-            let person = result[fetchedRequest!.count-1]
-            println(person.valueForKey("name") as! String?)
-
-        }else {
-            println("Could not fetch \(error), \(error!.userInfo)")
-        }
+        
         
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

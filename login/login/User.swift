@@ -10,13 +10,13 @@ import Foundation
 import UIKit
 
 
-class UserProvider: Model{
+class User: Model{
     
     @NSManaged var name : NSString
     @NSManaged var access_token : NSString
-    
-    init(){
-        super.init(table: "Users")
+   
+    convenience init(){
+        self.init(table: "Users")
     }
 
 }
