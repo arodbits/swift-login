@@ -74,7 +74,7 @@
 		AE4E7B981AD31D4500C9076B /* DataTaskHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTaskHandler.swift; sourceTree = "<group>"; };
 		AE4E7B9A1AD36C5400C9076B /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		AE4E7B9D1AD4898700C9076B /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
-		AE6F5ACA1ACDFC5E007CC2B6 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeController.swift; path = ../HomeController.swift; sourceTree = "<group>"; };
+		AE6F5ACA1ACDFC5E007CC2B6 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		AEF8D40A1AD0733E0006A6D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AEF8D40C1AD0754C0006A6D9 /* SignUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
