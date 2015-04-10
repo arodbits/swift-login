@@ -5,9 +5,10 @@
 //  Created by Anthony Rodriguez on 3/27/15.
 //  Copyright (c) 2015 capitalofcode. All rights reserved.
 //
-import UIkit
+
 import Foundation
 import CoreData
+import UIKit
 
 class LogInController: UIViewController {
 
@@ -16,29 +17,22 @@ class LogInController: UIViewController {
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
     override func viewDidLoad() {
+        // activityIndicator is hidden when it's stopped
         self.activityIndicatorView.hidesWhenStopped = true
         
-        let managedObjectContext = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext
-        let entityDescription = NSEntityDescription.entityForName("Users", inManagedObjectContext: managedObjectContext!)
+        let users = User()
+        users.name = "Josephx"
         
-        let users = NSManagedObject(entity: entityDescription!, insertIntoManagedObjectContext: managedObjectContext)
-        
-        users.setValue("Anthony", forKey: "name")
-
-        var error: NSError?
-        if (managedObjectContext?.save(&error) == nil){
-              println("Could not save \(error), \(error?.userInfo)")
+        if let error = users.save(){
+              println("Could not save \(error), \(error.userInfo)")
         }
         
-        let request = NSFetchRequest(entityName: "Users")
-        let fetchedRequest = managedObjectContext?.executeFetchRequest(request, error: &error) as [NSManagedObject]?
-        if let result = fetchedRequest {
-            let person = result[0]
-            println(person.valueForKey("name") as String?)
-
-        }else {
-            println("Could not fetch \(error), \(error!.userInfo)")
+        if let allUsers: AnyObject = users.all().result{
+            println(allUsers.valueForKey("name"))
+        }else{
+        
         }
+        
         
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -47,18 +41,18 @@ class LogInController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
-        let appDedelegate: AppDelegate = (UIApplication.sharedApplication()).delegate as AppDelegate
+        let appDedelegate: AppDelegate = (UIApplication.sharedApplication()).delegate as! AppDelegate
 
         // Dispose of any resources that can be recreated.
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "loginToHome"){
-            var homeViewController = segue.destinationViewController as HomeController
+            var homeViewController = segue.destinationViewController as! HomeController
             homeViewController.nameHolder = sender as? String
         }
         if (segue.identifier == "loginToSignup"){
-            var homeViewController = segue.destinationViewController as SignUpController
+            var homeViewController = segue.destinationViewController as! SignUpController
         }
     }
     @IBAction func signUpPressed(sender: AnyObject) {
