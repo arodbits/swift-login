@@ -40,6 +40,5 @@ class Model: NSManagedObject {
         }
         return (result: nil, error: error)
     }
- 
     
 }

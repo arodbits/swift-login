@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14C1514" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Roles" representedClassName="login.Role" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Users" representedClassName="login.User" syncable="YES">
         <attribute name="access_token" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="roles" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Roles" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Users" positionX="-36" positionY="9" width="128" height="75"/>
+        <element name="Roles" positionX="-63" positionY="29" width="128" height="73"/>
+        <element name="Users" positionX="126" positionY="27" width="128" height="103"/>
     </elements>
 </model>
