@@ -33,6 +33,14 @@ class LogInController: UIViewController {
         
         }
         
+        let roles = Role()
+        roles.id = 1
+        roles.type = "Admin"
+        roles.save()
+        
+        if let r = roles.all().result{
+            println(r.valueForKey("type"))
+        }
         
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -55,6 +63,7 @@ class LogInController: UIViewController {
             var homeViewController = segue.destinationViewController as! SignUpController
         }
     }
+    
     @IBAction func signUpPressed(sender: AnyObject) {
         NSOperationQueue.mainQueue().addOperationWithBlock({
             self.performSegueWithIdentifier("loginToSignup", sender: AnyObject?())
