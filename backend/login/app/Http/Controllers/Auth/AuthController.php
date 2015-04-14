@@ -40,7 +40,7 @@ class AuthController extends Controller {
 
 		if ($validator->fails())
 		{
-			return \Response::json($validator->messages());
+			return \Response::json($validator->messages(), 404);
 		}
 
 		$this->auth->login($this->registrar->create($request->all()));

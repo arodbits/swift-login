@@ -31,6 +31,7 @@
 		AE4E7B9B1AD36C5400C9076B /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4E7B9A1AD36C5400C9076B /* JSONParser.swift */; };
 		AE4E7B9E1AD4898700C9076B /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AE4E7B9C1AD4898700C9076B /* CoreDataModel.xcdatamodeld */; };
 		AE6F5ACB1ACDFC5E007CC2B6 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6F5ACA1ACDFC5E007CC2B6 /* HomeController.swift */; };
+		AEB372B21ADCA00B002B39C5 /* RegisterAndSignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB372B11ADCA00B002B39C5 /* RegisterAndSignUp.swift */; };
 		AEF8D40B1AD0733E0006A6D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEF8D4091AD0733E0006A6D9 /* Main.storyboard */; };
 		AEF8D40D1AD0754C0006A6D9 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF8D40C1AD0754C0006A6D9 /* SignUpController.swift */; };
 /* End PBXBuildFile section */
@@ -75,6 +76,7 @@
 		AE4E7B9A1AD36C5400C9076B /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		AE4E7B9D1AD4898700C9076B /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		AE6F5ACA1ACDFC5E007CC2B6 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		AEB372B11ADCA00B002B39C5 /* RegisterAndSignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterAndSignUp.swift; sourceTree = "<group>"; };
 		AEF8D40A1AD0733E0006A6D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AEF8D40C1AD0754C0006A6D9 /* SignUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,6 +131,7 @@
 				AE0EF5361AC5FF3600A1FF9E /* Images.xcassets */,
 				AE0EF5381AC5FF3600A1FF9E /* LaunchScreen.xib */,
 				AE0EF52D1AC5FF3600A1FF9E /* Supporting Files */,
+				AEB372B11ADCA00B002B39C5 /* RegisterAndSignUp.swift */,
 			);
 			path = login;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				AE4E7B971AD2F72800C9076B /* OAuthAuthProvider.swift in Sources */,
 				AE1A860D1AD5DE0C006BE0F2 /* User.swift in Sources */,
 				AE6F5ACB1ACDFC5E007CC2B6 /* HomeController.swift in Sources */,
+				AEB372B21ADCA00B002B39C5 /* RegisterAndSignUp.swift in Sources */,
 				AE4E7B991AD31D4500C9076B /* DataTaskHandler.swift in Sources */,
 				AE1A860F1AD6018B006BE0F2 /* DB.swift in Sources */,
 				AE4E7B9E1AD4898700C9076B /* CoreDataModel.xcdatamodeld in Sources */,
