@@ -34,7 +34,7 @@ class DataTaskHandler {
                     }
                     else if res.statusCode == 404
                     {
-                        handler(result:nil, error: "The server couldn't be found. Please, contact the Administrator or try later.")
+                        handler(result:data, error: "The server couldn't be found. Please, contact the Administrator or try later.")
                     }
                 }
             }
