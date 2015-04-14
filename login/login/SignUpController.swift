@@ -22,7 +22,10 @@ class SignUpController: UIViewController {
         
     }
     @IBAction func signUpPressed(sender: UIButton) {
-       
+       let registerSign = RegisterAndSignUp()
+        let data: NSDictionary = ["email": self.emailInput.text, "password" : self.passwordInput.text]
+        println(data)
+       registerSign.register(data)
     }
    
 }
