@@ -30,8 +30,7 @@ class WelcomeController extends Controller {
 	 */
 	public function index()
 	{
-		dd(\Auth::user()->id);
-		//return view('welcome');
+		return view('welcome');
 	}
 
 }

@@ -92,15 +92,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "login/Register.swift"
-            timestampString = "450741136.299566"
+            timestampString = "450809273.480032"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "register(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -112,12 +112,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "login/SignUpController.swift"
-            timestampString = "450740717.383888"
+            timestampString = "450808710.857029"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "signUpPressed(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "login/Register.swift"
+            timestampString = "450809273.480032"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "register(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

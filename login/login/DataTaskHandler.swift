@@ -10,12 +10,12 @@ import Foundation
 import UIKit
 
 class DataTaskHandler {
-
+    //The session is stored and shared within requests
     let session = NSURLSession.sharedSession()
     
     func make (request: NSMutableURLRequest, handler: (result: NSData?, error: String?)->Void){
         let task = session.dataTaskWithRequest(request, completionHandler: {(data: NSData!, response: NSURLResponse!, error: NSError!) -> Void in
-//          No errors
+            //No errors
             println(error)
             if error == nil
             {
@@ -40,6 +40,12 @@ class DataTaskHandler {
                 }
             }
         })
+        task.resume()
+    }
+    
+    
+    func execute(request: NSMutableURLRequest, handler: (data: NSData?, response: NSURLResponse?, error: NSError?)->Void){
+        let task = session.dataTaskWithRequest(request, completionHandler: handler)
         task.resume()
     }
 }

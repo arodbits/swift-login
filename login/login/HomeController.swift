@@ -9,34 +9,37 @@
 import Foundation
 import UIKit
 
-class HomeController: UIViewController {
+class HomeController: UIViewController{
     
     @IBOutlet weak var name: UILabel!
     
     var nameHolder: String?
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
-        
-        NSOperationQueue.mainQueue().addOperationWithBlock({
-            self.performSegueWithIdentifier("homeToLogin", sender: AnyObject?())
+        NSOperationQueue.mainQueue().addOperationWithBlock(
+        {
+//            self.performSegueWithIdentifier("homeToLogin", sender: AnyObject?())
         })
         
         name.text = nameHolder
     }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "homeToLogin"){
-//            var logInController = segue.destinationViewController as LogInController
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if (segue.identifier == "homeToLogin")
+        {
+            
         }
-        else if (segue.identifier == "homeToLogin"){
-            //            var logInController = segue.destinationViewController as LogInController
+        else if (segue.identifier == "homeToLogin")
+        {
+
         }
     }
-    
-    override func didReceiveMemoryWarning() {
+
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }

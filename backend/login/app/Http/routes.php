@@ -17,10 +17,6 @@ Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
 
-Route::post('api/signup', function(Request $request){
-	
-});
-
 Route::controllers([
 	'auth'		=> 'Auth\AuthController',
 	'password' 	=> 'Auth\PasswordController',

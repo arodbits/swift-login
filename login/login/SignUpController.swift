@@ -13,8 +13,10 @@ class SignUpController: UIViewController {
     
     @IBOutlet weak var emailInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
+    @IBOutlet weak var repeatPasswordInput: UITextField!
+    @IBOutlet weak var nameInput: UITextField!
+    @IBOutlet weak var lastname: UITextField!
     
-   
     
     @IBAction func cancelButtonPressed(sender: UIStoryboardSegue) {
         
@@ -23,7 +25,13 @@ class SignUpController: UIViewController {
     }
     @IBAction func signUpPressed(sender: UIButton) {
        let register = Register()
-        let data: NSDictionary = ["email": self.emailInput.text, "password" : self.passwordInput.text]
+        let data: NSDictionary = [
+            "email": self.emailInput.text,
+            "password" : self.passwordInput.text,
+            "name" : self.nameInput.text,
+            "lastname": self.lastname.text,
+            "password_confirmation": self.repeatPasswordInput.text
+            ]
         register.register(data)
     }
    
