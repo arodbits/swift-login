@@ -16,6 +16,7 @@ class DataTaskHandler {
     func make (request: NSMutableURLRequest, handler: (result: NSData?, error: String?)->Void){
         let task = session.dataTaskWithRequest(request, completionHandler: {(data: NSData!, response: NSURLResponse!, error: NSError!) -> Void in
 //          No errors
+            println(error)
             if error == nil
             {
 //              Check the status code

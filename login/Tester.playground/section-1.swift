@@ -28,4 +28,6 @@ class Employee: Person{
 
 let e = Employee()
 
+let test: NSDictionary = ["email": "AnthonyRodriguez"]
+
 

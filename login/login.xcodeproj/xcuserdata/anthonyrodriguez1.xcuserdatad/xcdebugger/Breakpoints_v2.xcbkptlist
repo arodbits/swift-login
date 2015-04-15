@@ -95,12 +95,12 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "login/RegisterAndSignUp.swift"
-            timestampString = "450727891.452451"
+            filePath = "login/Register.swift"
+            timestampString = "450741136.299566"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "register(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -112,11 +112,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "login/SignUpController.swift"
-            timestampString = "450727687.867292"
+            timestampString = "450740717.383888"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
             landmarkName = "signUpPressed(_:)"
             landmarkType = "5">
          </BreakpointContent>
