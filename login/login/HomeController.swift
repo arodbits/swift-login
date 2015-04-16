@@ -14,17 +14,22 @@ class HomeController: UIViewController{
     @IBOutlet weak var name: UILabel!
     
     var nameHolder: String?
+    var auth = Auth()
     
     @IBAction func unwindToHome(segue:UIStoryboardSegue)
     {
         
     }
     
+    func showUseData(){
+        
+    }
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        let auth = Auth()
-        if let authenticated = auth.check()
+       
+        if let authenticated = self.auth.check()
         {
             println("Authenticated")
         }

@@ -93,6 +93,7 @@ class LogInController: UIViewController {
                 {
                     auth.me({ (name) -> Void in
                         self.mainDispatcher({ () -> Void in
+                            //Go back to home. call unwindToHome segue
                             self.performSegueWithIdentifier("unwindToHome", sender: AnyObject?())
                         })
                     })

@@ -11,5 +11,7 @@ import Foundation
 protocol AuthProvider{
 
     func check()->String?
+    
+    func me(handler: ()->Void)->Void
 
 }

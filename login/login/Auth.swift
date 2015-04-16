@@ -20,5 +20,9 @@ class Auth {
     func check()->String?{
         return self.authProvider.check()
     }
+    
+    func user(){
+        
+    }
 
 }
