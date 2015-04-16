@@ -21,12 +21,12 @@ struct Credentials {
 struct OAuthToken {
     
     //  Define configuration variables
-    let client_id       = "In9wHQ4qXx0y5P8x"
-    let client_secret   = "feyBl72EySihY3xxzmSFeDGcsibTwMvk"
+    let client_id       = "GwcqkiZXvMexepc1"
+    let client_secret   = "oJS2bjRoBDYwyZp8RqC62aCb44Md1RC6"
     let grant_type      = "password"
     let url: NSURL?
-    
-    var bodyDataString: NSData {
+    var bodyDataString: NSData
+    {
         let bodyComposition = "grant_type=\(self.grant_type)&client_id=\(self.client_id)&client_secret=\(client_secret)&password=\(self.credentials.password)&username=\(self.credentials.username)"
         
         println(bodyComposition)
@@ -36,13 +36,15 @@ struct OAuthToken {
     
     var credentials: Credentials
     
-    init(credentials: Credentials, baseUrl: NSURL){
+    init(credentials: Credentials, baseUrl: NSURL)
+    {
         self.credentials = credentials
         self.url = NSURL(string: "/oauth/access_token", relativeToURL: baseUrl)
         
     }
     
-    func request(handler: (result: NSData?, error: String?)->Void){
+    func request(handler: (result: NSData?, error: String?)->Void)
+    {
         let request = NSMutableURLRequest(URL: self.url!)
         request.HTTPMethod = "POST"
         request.HTTPBody = self.bodyDataString
@@ -53,41 +55,55 @@ struct OAuthToken {
     }
 }
 
-class OAuthAuthProvider {
+class OAuthAuthProvider: AuthProvider {
     
     //Base URL
     let baseUrl = NSURL(string: "http://homestead.app/")
     var access_token: String? = nil
     
+    //Check whether the user is currently authenticated
+    func check()->String? {
+        //If the user is authenticated a valid access_token must be available
+        return self.access_token
+    }
+    
     //Asynchronous call, returning a handler
-    func getAccessToken(credentials: Credentials, handler: (token: String?, error: String?)->Void){
+    func getAccessToken(credentials: Credentials, handler: (token: String?, error: String?)->Void)
+    {
         let oauthTokenInstance = OAuthToken(credentials: credentials, baseUrl: self.baseUrl!)
         //handle the response. Get token and store it
         oauthTokenInstance.request({ (result, error) -> Void in
-            if let res = result {
+            if let res = result
+            {
+                
                 if let jsonDictionary = JSONParser(data: res).dictionary(){
                     self.access_token = jsonDictionary["access_token"] as? String
                     handler(token: self.access_token!, error: error)
                 }
 
-            }else{
+            }else
+            {
                 handler(token: nil, error:error)
             }
         })
     }
     
-    func me(handler: (name: String) -> Void){
+    func me(handler: (name: String) -> Void)
+    {
         let url = NSURL(string: "/me", relativeToURL: self.baseUrl)
         let request = NSMutableURLRequest(URL: url!)
         request.HTTPMethod = "GET"
 
-        // The request if valid only if the access_token exists
-        if let t = self.access_token {
+        // The request is valid only if the access_token exists
+        if let t = self.access_token
+        {
             request.setValue("Bearer \(t)", forHTTPHeaderField: "Authorization")
             let taskInstance = DataTaskHandler()
             taskInstance.make(request, handler: { (result, error) -> Void in
-                if let res = result {
-                    if let jsonDictionary = JSONParser(data: res).dictionary(){
+                if let res = result
+                {
+                    if let jsonDictionary = JSONParser(data: res).dictionary()
+                    {
                         let name = jsonDictionary["name"] as? String
                         handler(name: name!)
                     }

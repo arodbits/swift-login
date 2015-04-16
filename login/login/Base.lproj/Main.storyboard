@@ -60,11 +60,12 @@
                     </view>
                     <connections>
                         <outlet property="name" destination="TC0-no-vlS" id="ZDU-7Y-aB2"/>
+                        <segue destination="vXZ-lx-hvc" kind="show" identifier="homeToLogin" id="W0Q-SF-zfI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lpp-3V-lJZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-12" y="34"/>
+            <point key="canvasLocation" x="-85" y="34"/>
         </scene>
         <!--Sign Up Controller-->
         <scene sceneID="T1h-Ko-AfC">
@@ -261,9 +262,11 @@
                         <outlet property="activityIndicatorView" destination="4qQ-Kq-70z" id="4sU-Vg-57i"/>
                         <outlet property="email" destination="IF5-2D-xhy" id="IjL-9f-9t7"/>
                         <outlet property="password" destination="PXG-Ln-PJF" id="pgT-dw-Agl"/>
+                        <segue destination="SgX-d8-WbZ" kind="unwind" identifier="unwindToHome" unwindAction="unwindToHome:" id="bGb-Gj-Egh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <exit id="SgX-d8-WbZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="618" y="34"/>
         </scene>

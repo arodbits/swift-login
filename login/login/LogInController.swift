@@ -71,7 +71,6 @@ class LogInController: UIViewController {
     }
 
     @IBAction func SignInPressed(sender: AnyObject) {
-        //let api = ApiHandler()
         let auth = OAuthAuthProvider()
         if email.hasText() && password.hasText()
         {
@@ -80,6 +79,7 @@ class LogInController: UIViewController {
             auth.getAccessToken(credentials, handler: { (token, error) -> Void in
                 self.mainDispatcher({ () -> Void in
                     self.activityIndicatorView.stopAnimating()
+                    println(token)
                 })
                 if error != nil
                 {
@@ -93,7 +93,7 @@ class LogInController: UIViewController {
                 {
                     auth.me({ (name) -> Void in
                         self.mainDispatcher({ () -> Void in
-                            self.performSegueWithIdentifier("loginToHome", sender: name)
+                            self.performSegueWithIdentifier("unwindToHome", sender: AnyObject?())
                         })
                     })
                 }

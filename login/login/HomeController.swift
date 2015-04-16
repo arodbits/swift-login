@@ -15,26 +15,32 @@ class HomeController: UIViewController{
     
     var nameHolder: String?
     
+    @IBAction func unwindToHome(segue:UIStoryboardSegue)
+    {
+        
+    }
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
-        NSOperationQueue.mainQueue().addOperationWithBlock(
+        let auth = Auth()
+        if let authenticated = auth.check()
         {
-//            self.performSegueWithIdentifier("homeToLogin", sender: AnyObject?())
-        })
-        
-        name.text = nameHolder
+            println("Authenticated")
+        }
+        else{
+            NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                self.performSegueWithIdentifier("homeToLogin", sender: AnyObject?())
+            })
+        }
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
         if (segue.identifier == "homeToLogin")
         {
-            
-        }
-        else if (segue.identifier == "homeToLogin")
-        {
-
+            NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                var loginController = segue.destinationViewController as? LogInController
+            })
         }
     }
 
