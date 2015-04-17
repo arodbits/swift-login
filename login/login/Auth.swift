@@ -25,6 +25,9 @@ class Auth {
         self.authProvider.me(handler)
     }
     
+    func logout(){
+        self.authProvider.logout()
+    }
   
 
 }

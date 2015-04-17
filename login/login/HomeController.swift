@@ -12,15 +12,16 @@ import UIKit
 class HomeController: UIViewController{
     
     @IBOutlet weak var name: UILabel!
-    
-    var nameHolder: String?
+
     var auth = Auth()
     
     @IBAction func unwindToHome(segue:UIStoryboardSegue)
     {
-        auth.user({ (data, error)->Void in
-            println(error)
-        })
+       
+    }
+    @IBAction func logout(sender: AnyObject) {
+        self.auth.logout()
+        self.performSegueWithIdentifier("homeToLogin", sender: AnyObject?())
     }
     
     override func viewDidLoad()
@@ -29,7 +30,14 @@ class HomeController: UIViewController{
        
         if let authenticated = self.auth.check()
         {
-            
+            let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+            self.auth.user({ (data, error) -> Void in
+                if let result = data {
+                    NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                        self.name.text =  result["name"] as? String
+                    })
+                }
+            })
         }
         else{
             NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in

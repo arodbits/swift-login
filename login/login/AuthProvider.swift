@@ -14,6 +14,6 @@ protocol AuthProvider{
     
     func me(handler: (data: NSDictionary?, error: String?)->Void)->Void
     
-  
+    func logout()->Void
 
 }

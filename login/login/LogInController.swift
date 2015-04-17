@@ -57,10 +57,7 @@ class LogInController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "loginToHome"){
             var homeViewController = segue.destinationViewController as! HomeController
-            homeViewController.nameHolder = sender as? String
-        }
-        if (segue.identifier == "loginToSignup"){
-            var homeViewController = segue.destinationViewController as! SignUpController
+            //homeViewController.nameHolder = sender as? String
         }
     }
     
@@ -76,7 +73,7 @@ class LogInController: UIViewController {
         {
             self.activityIndicatorView.startAnimating()
             let credentials = Credentials(username: email.text, password: password.text)
-            auth.getAccessToken(credentials, handler: { (token, error) -> Void in
+            auth.attempt(credentials, handler: { (token, error) -> Void in
                 self.mainDispatcher({ () -> Void in
                     self.activityIndicatorView.stopAnimating()
                     println(token)
@@ -91,10 +88,7 @@ class LogInController: UIViewController {
                 }
                 else
                 {
-                
-                            self.performSegueWithIdentifier("unwindToHome", sender: AnyObject?())
-                    
-                
+                    self.performSegueWithIdentifier("unwindToHome", sender: AnyObject?())
                 }
             })
         }

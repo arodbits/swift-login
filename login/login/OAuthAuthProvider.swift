@@ -59,33 +59,42 @@ class OAuthAuthProvider: AuthProvider {
     
     //Base URL
     let baseUrl = NSURL(string: "http://homestead.app/")
-    var access_token: String? = nil
+    let userDefault: NSUserDefaults
+    
+    init(){
+        self.userDefault = NSUserDefaults.standardUserDefaults()
+    }
     
     //Check whether the user is currently authenticated
     func check()->String? {
         //If the user is authenticated, a valid access_token must be available
-        return self.access_token
+        return self.getAccessToken()
     }
     
-    
-    //Asynchronous call, returning a handler
-    func getAccessToken(credentials: Credentials, handler: (token: String?, error: String?)->Void)
-    {
+    func attempt(credentials: Credentials, handler: (token: String?, error: String?)->Void){
         let oauthTokenInstance = OAuthToken(credentials: credentials, baseUrl: self.baseUrl!)
         //handle the response. Get token and store it
         oauthTokenInstance.request({ (result, error) -> Void in
             if let res = result
             {
                 if let jsonDictionary = JSONParser(data: res).dictionary(){
-                    self.access_token = jsonDictionary["access_token"] as? String
-                    handler(token: self.access_token!, error: error)
+                    let token = jsonDictionary["access_token"] as? String
+                    self.userDefault.setObject(token , forKey: "token")
+                    handler(token: self.getAccessToken()!, error: error)
                 }
-
+                
             }else
             {
                 handler(token: nil, error:error)
             }
         })
+    }
+    
+    
+    //Asynchronous call, returning a handler
+    func getAccessToken()->String?
+    {
+        return self.userDefault.valueForKey("token") as? String
     }
     
     func me(handler: (data: NSDictionary?, error: String?) -> Void)
@@ -94,7 +103,7 @@ class OAuthAuthProvider: AuthProvider {
         let request = NSMutableURLRequest(URL: url!)
         request.HTTPMethod = "GET"
         // The request is valid only if the access_token exists
-        if let t = self.access_token
+        if let t = self.getAccessToken()
         {
             request.setValue("Bearer \(t)", forHTTPHeaderField: "Authorization")
             let taskInstance = DataTaskHandler()
@@ -113,6 +122,10 @@ class OAuthAuthProvider: AuthProvider {
         {
             handler(data:nil, error: "The access token is not available")
         }
+    }
+    
+    func logout(){
+        self.userDefault.removeObjectForKey("token")
     }
 }
 
