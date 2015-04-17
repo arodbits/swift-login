@@ -12,6 +12,8 @@ protocol AuthProvider{
 
     func check()->String?
     
-    func me(handler: ()->Void)->Void
+    func me(handler: (data: NSDictionary?, error: String?)->Void)->Void
+    
+  
 
 }

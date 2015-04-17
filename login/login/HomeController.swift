@@ -18,11 +18,9 @@ class HomeController: UIViewController{
     
     @IBAction func unwindToHome(segue:UIStoryboardSegue)
     {
-        
-    }
-    
-    func showUseData(){
-        
+        auth.user({ (data, error)->Void in
+            println(error)
+        })
     }
     
     override func viewDidLoad()
@@ -31,7 +29,7 @@ class HomeController: UIViewController{
        
         if let authenticated = self.auth.check()
         {
-            println("Authenticated")
+            
         }
         else{
             NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in

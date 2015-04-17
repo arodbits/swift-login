@@ -21,8 +21,10 @@ class Auth {
         return self.authProvider.check()
     }
     
-    func user(){
-        
+    func user(handler: (data: NSDictionary?, error: String?)->Void){
+        self.authProvider.me(handler)
     }
+    
+  
 
 }

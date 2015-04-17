@@ -63,9 +63,10 @@ class OAuthAuthProvider: AuthProvider {
     
     //Check whether the user is currently authenticated
     func check()->String? {
-        //If the user is authenticated a valid access_token must be available
+        //If the user is authenticated, a valid access_token must be available
         return self.access_token
     }
+    
     
     //Asynchronous call, returning a handler
     func getAccessToken(credentials: Credentials, handler: (token: String?, error: String?)->Void)
@@ -75,7 +76,6 @@ class OAuthAuthProvider: AuthProvider {
         oauthTokenInstance.request({ (result, error) -> Void in
             if let res = result
             {
-                
                 if let jsonDictionary = JSONParser(data: res).dictionary(){
                     self.access_token = jsonDictionary["access_token"] as? String
                     handler(token: self.access_token!, error: error)
@@ -88,12 +88,11 @@ class OAuthAuthProvider: AuthProvider {
         })
     }
     
-    func me(handler: (name: String) -> Void)
+    func me(handler: (data: NSDictionary?, error: String?) -> Void)
     {
         let url = NSURL(string: "/me", relativeToURL: self.baseUrl)
         let request = NSMutableURLRequest(URL: url!)
         request.HTTPMethod = "GET"
-
         // The request is valid only if the access_token exists
         if let t = self.access_token
         {
@@ -104,13 +103,15 @@ class OAuthAuthProvider: AuthProvider {
                 {
                     if let jsonDictionary = JSONParser(data: res).dictionary()
                     {
-                        let name = jsonDictionary["name"] as? String
-                        handler(name: name!)
+                        println(jsonDictionary)
+                        handler(data: jsonDictionary, error: nil)
                     }
-                    
                 }
-                
             })
+        }
+        else
+        {
+            handler(data:nil, error: "The access token is not available")
         }
     }
 }
