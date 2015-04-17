@@ -12,32 +12,42 @@ import UIKit
 class HomeController: UIViewController{
     
     @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var activityViewIndicator: UIActivityIndicatorView!
 
     var auth = Auth()
     
     @IBAction func unwindToHome(segue:UIStoryboardSegue)
     {
-       
+       showUserProfile()
     }
     @IBAction func logout(sender: AnyObject) {
         self.auth.logout()
         self.performSegueWithIdentifier("homeToLogin", sender: AnyObject?())
     }
     
+    func showUserProfile(){
+        self.auth.user({ (data, error) -> Void in
+            if let result = data {
+                   NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                    self.name.text =  result["name"] as? String
+                    self.activityViewIndicator.stopAnimating()
+                    
+                })
+            }
+        })
+    }
+    
     override func viewDidLoad()
     {
+        
         super.viewDidLoad()
+
+        self.activityViewIndicator.startAnimating()
+        self.activityViewIndicator.hidesWhenStopped = true
        
         if let authenticated = self.auth.check()
         {
-            let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
-            self.auth.user({ (data, error) -> Void in
-                if let result = data {
-                    NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
-                        self.name.text =  result["name"] as? String
-                    })
-                }
-            })
+            self.showUserProfile()
         }
         else{
             NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in

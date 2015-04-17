@@ -17,11 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DeathtoStock_Wired2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="C0e-1d-WZv">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DeathtoStock_Wired2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="C0e-1d-WZv">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="User" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TC0-no-vlS">
-                                <rect key="frame" x="38" y="105" width="209" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TC0-no-vlS">
+                                <rect key="frame" x="38" y="105" width="209" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20.5" id="MEa-wp-kwM"/>
                                     <constraint firstAttribute="width" constant="209" id="uJW-LZ-GVr"/>
@@ -31,7 +31,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1t-cx-Red">
-                                <rect key="frame" x="38" y="73" width="467" height="38.5"/>
+                                <rect key="frame" x="38" y="73" width="467" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" red="0.92098721590909094" green="0.92098721590909094" blue="0.92098721590909094" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="0.92668876262626265" green="0.92668876262626265" blue="0.92668876262626265" alpha="1" colorSpace="calibratedRGB"/>
@@ -49,19 +49,30 @@
                                     <action selector="logout:" destination="9dl-9b-4Sv" eventType="touchUpInside" id="WwS-Us-AiW"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="dK7-uX-lMJ">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                                <rect key="contentStretch" x="1.3877787807814457e-17" y="0.0" width="1" height="1"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerY" secondItem="dK7-uX-lMJ" secondAttribute="centerY" id="09v-qW-Hfe"/>
                             <constraint firstItem="4GA-Mm-bh1" firstAttribute="leading" secondItem="o1t-cx-Red" secondAttribute="trailing" constant="8" symbolic="YES" id="EFY-1F-lYh"/>
                             <constraint firstItem="TC0-no-vlS" firstAttribute="top" secondItem="o1t-cx-Red" secondAttribute="bottom" constant="-6.5" id="EdC-p5-CPz"/>
+                            <constraint firstItem="C0e-1d-WZv" firstAttribute="bottom" secondItem="sXW-cC-7DS" secondAttribute="top" id="K4P-Wp-L1K"/>
+                            <constraint firstItem="C0e-1d-WZv" firstAttribute="leading" secondItem="Z7z-DY-7BW" secondAttribute="leading" id="Kub-rm-nE2"/>
+                            <constraint firstItem="C0e-1d-WZv" firstAttribute="centerY" secondItem="dK7-uX-lMJ" secondAttribute="centerY" id="LVU-LZ-pEm"/>
                             <constraint firstItem="4GA-Mm-bh1" firstAttribute="top" secondItem="vkC-MZ-pgt" secondAttribute="bottom" id="Oxq-Uo-P7l"/>
+                            <constraint firstAttribute="centerX" secondItem="dK7-uX-lMJ" secondAttribute="centerX" id="VkJ-qN-Och"/>
                             <constraint firstItem="o1t-cx-Red" firstAttribute="top" secondItem="vkC-MZ-pgt" secondAttribute="bottom" constant="53" id="aio-LM-pDC"/>
                             <constraint firstItem="TC0-no-vlS" firstAttribute="leading" secondItem="Z7z-DY-7BW" secondAttribute="leadingMargin" constant="22" id="djV-Kd-M0u"/>
                             <constraint firstItem="o1t-cx-Red" firstAttribute="leading" secondItem="Z7z-DY-7BW" secondAttribute="leadingMargin" constant="22" id="ftB-sg-hyx"/>
+                            <constraint firstItem="C0e-1d-WZv" firstAttribute="centerX" secondItem="dK7-uX-lMJ" secondAttribute="centerX" id="lGz-be-ozm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4GA-Mm-bh1" secondAttribute="trailing" constant="5" id="nxG-Yb-niQ"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityViewIndicator" destination="dK7-uX-lMJ" id="3zg-Z1-Hbp"/>
                         <outlet property="name" destination="TC0-no-vlS" id="ZDU-7Y-aB2"/>
                         <segue destination="vXZ-lx-hvc" kind="show" identifier="homeToLogin" id="W0Q-SF-zfI"/>
                     </connections>

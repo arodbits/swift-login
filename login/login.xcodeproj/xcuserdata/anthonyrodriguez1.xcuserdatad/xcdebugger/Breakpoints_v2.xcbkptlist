@@ -192,7 +192,7 @@
                   moduleName = "login"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/anthonyrodriguez1/Code/ios/login/login/login/OAuthAuthProvider.swift"
-                  timestampString = "450976538.112287"
+                  timestampString = "451003457.544577"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -207,26 +207,11 @@
                   moduleName = "login"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/anthonyrodriguez1/Code/ios/login/login/login/OAuthAuthProvider.swift"
-                  timestampString = "450976538.112398"
+                  timestampString = "451003457.544732"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
                   endingLineNumber = "0"
-                  offsetFromSymbolStart = "12">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "login.OAuthAuthProvider.init (login.OAuthAuthProvider.Type)() -&gt; login.OAuthAuthProvider"
-                  moduleName = "login"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anthonyrodriguez1/Code/ios/login/login/login/OAuthAuthProvider.swift"
-                  timestampString = "450976538.112493"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "61"
-                  endingLineNumber = "61"
                   offsetFromSymbolStart = "12">
                </Location>
             </Locations>
@@ -245,6 +230,38 @@
             startingLineNumber = "25"
             endingLineNumber = "25"
             landmarkName = "user(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "login/HomeController.swift"
+            timestampString = "451003428.795622"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "login/HomeController.swift"
+            timestampString = "451003428.795622"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
